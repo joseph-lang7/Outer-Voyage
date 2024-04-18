@@ -14,19 +14,42 @@ const Nav = () => {
   ];
   return (
     /* Nav */
-    <nav className="w-screen bg-blue-500 h-20 flex justify-between pl-3 pr-3 items-center">
-      <div>Logo</div>
-      <ul className="md:flex gap-3 hidden">
+    <div className="fixed bg-blue-500 w-full h-[80px] flex justify-between items-center px-4 text-white z-10">
+      <div className="z-20">
+        <p>Logo</p>
+      </div>
+
+      {/* nav menu */}
+      <ul className="hidden md:flex gap-5">
         {navLinks.map((navLink) => (
-          <li key={navLink.href}>
+          <li key={navLink.to}>
             <Link href={navLink.href}>{navLink.label}</Link>
           </li>
         ))}
       </ul>
-      <div className="md:hidden">
-        <Hamburger toggled={isOpen} toggle={setOpen} />
+
+      {/* Hamburger */}
+      <div className="md:hidden z-20">
+        <Hamburger
+          toggled={isOpen}
+          toggle={() => [setMobileNav(!mobileNav), setOpen(!isOpen)]}
+        />
       </div>
-    </nav>
+      {/* Mobile Menu */}
+      <ul
+        className={
+          !mobileNav
+            ? "hidden"
+            : "absolute top-0 left-0 w-full h-screen flex flex-col justify-center items-center bg-blue-500"
+        }
+      >
+        {navLinks.map((navLink) => (
+          <li key={navLink.to} className="py-6 text-3xl">
+            <Link href={navLink.href}>{navLink.label}</Link>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 };
 
