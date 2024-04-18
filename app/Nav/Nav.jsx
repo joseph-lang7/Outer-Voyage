@@ -2,10 +2,12 @@
 import { useState } from "react";
 import Link from "next/link";
 import Hamburger from "hamburger-react";
+import { usePathname } from "next/navigation";
 
 const Nav = () => {
   const [mobileNav, setMobileNav] = useState(false);
   const [isOpen, setOpen] = useState(false);
+  const currentPath = usePathname();
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "Training", href: "/training" },
@@ -22,7 +24,14 @@ const Nav = () => {
       {/* nav menu */}
       <ul className="hidden md:flex gap-5">
         {navLinks.map((navLink) => (
-          <li key={navLink.to}>
+          <li
+            key={navLink.to}
+            className={`${
+              currentPath === navLink.href
+                ? "border-b-2 border-white "
+                : "relative text-md w-fit block after:block after:content-[''] after:absolute after:h-[2px] after:bg-white after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left"
+            }`}
+          >
             <Link href={navLink.href}>{navLink.label}</Link>
           </li>
         ))}
