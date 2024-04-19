@@ -3,6 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Hamburger from "hamburger-react";
 import { usePathname } from "next/navigation";
+import { BiNavigation } from "react-icons/bi";
 
 const Nav = () => {
   const [mobileNav, setMobileNav] = useState(false);
@@ -17,8 +18,12 @@ const Nav = () => {
   return (
     /* Nav */
     <div className="fixed w-full h-[80px] flex justify-between items-center px-4 text-white z-10">
-      <div className="z-20">
-        <p>Logo</p>
+      <div>
+        <Link href="/">
+          <div className="hover:scale-110 hover:text-blue-500 duration-300">
+            <BiNavigation size={50} />
+          </div>
+        </Link>
       </div>
 
       {/* nav menu */}
