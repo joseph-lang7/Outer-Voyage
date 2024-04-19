@@ -4,7 +4,6 @@ import Link from "next/link";
 import Hamburger from "hamburger-react";
 import { usePathname } from "next/navigation";
 import { BiNavigation } from "react-icons/bi";
-
 const Nav = () => {
   const [mobileNav, setMobileNav] = useState(false);
   const [isOpen, setOpen] = useState(false);
@@ -18,7 +17,7 @@ const Nav = () => {
   return (
     /* Nav */
     <div className="fixed w-full h-[80px] flex justify-between items-center px-4 text-white z-10">
-      <div>
+      <div className="z-20">
         <Link href="/">
           <div className="hover:scale-110 hover:text-blue-500 duration-300">
             <BiNavigation size={50} />
@@ -30,7 +29,7 @@ const Nav = () => {
       <ul className="hidden md:flex gap-5">
         {navLinks.map((navLink) => (
           <li
-            key={navLink.to}
+            key={navLink.href}
             className={`${
               currentPath === navLink.href
                 ? "border-b-2 border-blue-500 "
@@ -54,12 +53,19 @@ const Nav = () => {
         className={
           !mobileNav
             ? "hidden"
-            : "absolute top-0 left-0 w-full h-screen flex flex-col justify-center items-center bg-blue-500"
+            : "absolute top-0 left-0 w-full h-screen flex flex-col justify-center items-center bg-black"
         }
       >
         {navLinks.map((navLink) => (
           <li key={navLink.to} className="py-6 text-3xl">
-            <Link href={navLink.href}>{navLink.label}</Link>
+            <Link
+              href={navLink.href}
+              onClick={() => {
+                [setMobileNav(!mobileNav), setOpen(!isOpen)];
+              }}
+            >
+              {navLink.label}
+            </Link>
           </li>
         ))}
       </ul>
