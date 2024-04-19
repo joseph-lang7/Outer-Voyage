@@ -8,7 +8,7 @@ import { MdMail } from "react-icons/md";
 import Link from "next/link";
 const Footer = () => {
   return (
-    <footer className="bg-black h-auto max-w-screen flex flex-col md:flex-row justify-center gap-4 md:gap-[50px] p-8 text-white">
+    <footer className="relative bottom-0 left-0 right-0  bg-black w-screen flex flex-col md:flex-row justify-center gap-4 md:gap-[50px] p-8 text-white">
       <div className="max-w-[500px]">
         <div>
           <h2 className="text-2xl font-bold">About Us</h2>
