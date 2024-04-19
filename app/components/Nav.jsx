@@ -16,7 +16,7 @@ const Nav = () => {
   ];
   return (
     /* Nav */
-    <div className="fixed bg-blue-500 w-full h-[80px] flex justify-between items-center px-4 text-white z-10">
+    <div className="fixed w-full h-[80px] flex justify-between items-center px-4 text-white z-10">
       <div className="z-20">
         <p>Logo</p>
       </div>
@@ -28,8 +28,8 @@ const Nav = () => {
             key={navLink.to}
             className={`${
               currentPath === navLink.href
-                ? "border-b-2 border-white "
-                : "relative text-md w-fit block after:block after:content-[''] after:absolute after:h-[2px] after:bg-white after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left"
+                ? "border-b-2 border-blue-500 "
+                : "relative text-md w-fit block after:block after:content-[''] after:absolute after:h-[2px] after:bg-blue-500 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left"
             }`}
           >
             <Link href={navLink.href}>{navLink.label}</Link>
