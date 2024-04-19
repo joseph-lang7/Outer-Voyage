@@ -43,7 +43,7 @@ const Footer = () => {
         </div>
       </div>
       <div>
-        <h2 className="text-2xl font-bold mt-2">Company</h2>
+        <h2 className="text-2xl font-bold mt-2 md:mt-0">Company</h2>
         <div>
           <ul>
             <Link href="/">
@@ -65,7 +65,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="w-56">
-        <h2 className="text-2xl font-bold mt-2">Contact Us</h2>
+        <h2 className="text-2xl font-bold mt-2 md:mt-0">Contact Us</h2>
         <div>
           <ul>
             <li className="flex gap-1 items-center hover:text-white duration-300 hover:ml-2 cursor-pointer">
