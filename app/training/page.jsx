@@ -111,7 +111,7 @@ const TrainingPage = () => {
       </div>
       <h2 className="text-4xl text-white mb-5">Are You Ready?</h2>
       <Link href="/pricing">
-        <button className="px-5 py-2 bg-blue-500 rounded-md hover:bg-blue-700  duration-300 hover:scale-110 hover:text-white ">
+        <button className="px-7 py-3 bg-blue-500 rounded-md hover:bg-blue-700  duration-300 hover:scale-110 hover:text-white ">
           Get Started
         </button>
       </Link>
