@@ -46,9 +46,9 @@ const TrainingPage = () => {
         conditions on the moon and develop proficiency in mission-critical
         tasks"
       />
-      <h2 className="text-4xl text-white mb-5">Are You Ready?</h2>
+      <h2 className="text-4xl text-center text-white mb-5">Are You Ready?</h2>
       <Link href="/pricing">
-        <button className="px-7 py-3 bg-blue-500 rounded-md hover:bg-blue-700  duration-300 hover:scale-110 hover:text-white ">
+        <button className="px-7 py-3 bg-blue-500 rounded-md hover:bg-blue-700  duration-300 hover:scale-110 hover:text-white">
           Get Started
         </button>
       </Link>

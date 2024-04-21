@@ -22,7 +22,7 @@ const ModuleCard = ({ src, alt, moduleNumber, moduleTitle, p1, p2, p3 }) => {
           <h2 className="text-2xl text-center md:text-center lg:text-start font-bold  text-white">
             {moduleTitle}
           </h2>
-          <div className="flex justify-center items-center lg:hidden  max-w-[450px] max-h-[450px] rounded-md ">
+          <div className="flex justify-center items-center lg:hidden  w-[200px] h-[200px] rounded-md ">
             <Image
               src={src}
               alt={alt}
