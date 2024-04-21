@@ -7,6 +7,7 @@ import { BiNavigation } from "react-icons/bi";
 const Nav = () => {
   const [mobileNav, setMobileNav] = useState(false);
   const [isOpen, setOpen] = useState(false);
+  const [color, setColor] = useState(false);
   const currentPath = usePathname();
   const navLinks = [
     { label: "Home", href: "/" },
@@ -14,13 +15,29 @@ const Nav = () => {
     { label: "Pricing", href: "/pricing" },
     { label: "About", href: "/about" },
   ];
+
+  const changeColor = () => {
+    if (window.scrollY >= 100) {
+      setColor(true);
+    } else {
+      setColor(false);
+    }
+  };
+  window.addEventListener("scroll", changeColor);
+
   return (
     /* Nav */
-    <div className="fixed w-full h-[80px] flex justify-between items-center px-4 text-white z-10">
+    <div
+      className={
+        color
+          ? "fixed bg-black bg-opacity-55 w-full h-[80px] flex justify-between items-center px-4 text-white z-10"
+          : "fixed w-full h-[80px] flex justify-between items-center px-4 text-white z-10"
+      }
+    >
       <div className="z-20">
         <Link href="/">
           <div className="hover:scale-110 hover:text-blue-500 duration-300">
-            <BiNavigation size={50} />
+            <BiNavigation size={40} />
           </div>
         </Link>
       </div>
