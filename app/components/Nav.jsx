@@ -30,7 +30,7 @@ const Nav = () => {
     <div
       className={
         color
-          ? "fixed bg-black bg-opacity-55 w-full h-[80px] flex justify-between items-center px-4 text-white z-10"
+          ? "fixed bg-black bg-opacity-55 transition-colors duration-300 w-full h-[80px] flex justify-between items-center px-4 text-white z-10"
           : "fixed w-full h-[80px] flex justify-between items-center px-4 text-white z-10"
       }
     >
