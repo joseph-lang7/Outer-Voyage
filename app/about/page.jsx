@@ -32,7 +32,7 @@ const AboutPage = () => {
             and effective learning modules, ensuring your success in reaching
             for the stars.
           </p>
-          <div className="grid sm:grid-cols-2 xl:grid-cols-2 md:grid-cols-1 gap-2 mt-5 max-w-[600px]">
+          <div className="grid grid-cols-1 w-auto sm:grid-cols-2 gap-2 mt-5 sm:w-[550px] md:w-[600px]">
             <ServiceItem text="Expert Guidance" />
             <ServiceItem text="Hands-on Training" />
             <ServiceItem text="Real Simulations" />
@@ -42,11 +42,11 @@ const AboutPage = () => {
           </div>
         </div>
       </div>
-      <div className=" hidden md:flex justify-center items-center w-full h-full  ">
+      <div className=" hidden xl:flex justify-center items-center  ">
         <Image
           src={aboutImage}
           alt="Space Image"
-          className="rounded-md object-cover max-w-[600px] h-[700px]"
+          className="rounded-md object-cover w-[480px] h-[700px]"
         />
       </div>
     </div>
