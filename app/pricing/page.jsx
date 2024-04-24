@@ -1,5 +1,4 @@
 import React from "react";
-import { IoIosCheckmark } from "react-icons/io";
 import PricingCard from "../components/PricingCard";
 
 const PricingPage = () => {
