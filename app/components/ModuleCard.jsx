@@ -3,7 +3,7 @@ import Image from "next/image";
 const ModuleCard = ({ src, alt, moduleNumber, moduleTitle, p1, p2, p3 }) => {
   return (
     <div>
-      <div className=" md:flex md:justify-around border-4  bg-gradient-to-b from-gray-400 to-transparent rounded-md  md:items-center gap-5 mb-10 py-5 px-10">
+      <div className="  md:flex justify-around border-4  bg-gradient-to-b from-gray-400 to-transparent rounded-md  md:items-center  mb-10 lg:gap-5 py-5 px-10">
         <div className="flex justify-center">
           <div>
             <div className="hidden lg:flex min-w-[450px] max-w-[450px] max-h-[450px] min-h-[450px] rounded-md ">
@@ -15,7 +15,7 @@ const ModuleCard = ({ src, alt, moduleNumber, moduleTitle, p1, p2, p3 }) => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col items-center gap-5 text-white max-w-[700px] ">
+        <div className="flex flex-col items-center justify-center gap-5 text-white w-[300px] h-[400px] sm:w-[450px] sm:h-[700px] lg:max-w-[350px] xl:min-w-[600px]">
           <h2 className=" text-3xl text-center md:text-center lg:text-start text-white">
             {moduleNumber}
           </h2>
